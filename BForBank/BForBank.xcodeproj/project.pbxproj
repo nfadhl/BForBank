@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1E20E25C2CD129E800B08904 /* BForBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E25B2CD129E800B08904 /* BForBankApp.swift */; };
-		1E20E25E2CD129E800B08904 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E25D2CD129E800B08904 /* ContentView.swift */; };
 		1E20E2602CD129EB00B08904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E20E25F2CD129EB00B08904 /* Assets.xcassets */; };
 		1E20E2632CD129EB00B08904 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E20E2622CD129EB00B08904 /* Preview Assets.xcassets */; };
-		1E20E26D2CD129EB00B08904 /* BForBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E26C2CD129EB00B08904 /* BForBankTests.swift */; };
 		1E20E2772CD129EB00B08904 /* BForBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E2762CD129EB00B08904 /* BForBankUITests.swift */; };
 		1E20E2792CD129EB00B08904 /* BForBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E2782CD129EB00B08904 /* BForBankUITestsLaunchTests.swift */; };
+		1E20E2872CD12AA800B08904 /* ScanIBANViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E2862CD12AA800B08904 /* ScanIBANViewModel.swift */; };
+		1E20E2892CD12ABE00B08904 /* ScanIBANView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E2882CD12ABE00B08904 /* ScanIBANView.swift */; };
+		1E20E28C2CD12AE400B08904 /* AddBeneficiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E28B2CD12AE400B08904 /* AddBeneficiaryView.swift */; };
+		1E20E28E2CD12AF400B08904 /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E28D2CD12AF400B08904 /* DataScannerView.swift */; };
+		1E20E2912CD12B1200B08904 /* IBANValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E2902CD12B1200B08904 /* IBANValidator.swift */; };
+		1E20E2932CD12B3800B08904 /* IBANValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E2922CD12B3800B08904 /* IBANValidatorTest.swift */; };
+		1E20E2952CD12B5200B08904 /* ScanIBANViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20E2942CD12B5200B08904 /* ScanIBANViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +41,19 @@
 /* Begin PBXFileReference section */
 		1E20E2582CD129E800B08904 /* BForBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BForBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E20E25B2CD129E800B08904 /* BForBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BForBankApp.swift; sourceTree = "<group>"; };
-		1E20E25D2CD129E800B08904 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E20E25F2CD129EB00B08904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E20E2622CD129EB00B08904 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E20E2682CD129EB00B08904 /* BForBankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BForBankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E20E26C2CD129EB00B08904 /* BForBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BForBankTests.swift; sourceTree = "<group>"; };
 		1E20E2722CD129EB00B08904 /* BForBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BForBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E20E2762CD129EB00B08904 /* BForBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BForBankUITests.swift; sourceTree = "<group>"; };
 		1E20E2782CD129EB00B08904 /* BForBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BForBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1E20E2862CD12AA800B08904 /* ScanIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanIBANViewModel.swift; sourceTree = "<group>"; };
+		1E20E2882CD12ABE00B08904 /* ScanIBANView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanIBANView.swift; sourceTree = "<group>"; };
+		1E20E28B2CD12AE400B08904 /* AddBeneficiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeneficiaryView.swift; sourceTree = "<group>"; };
+		1E20E28D2CD12AF400B08904 /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
+		1E20E2902CD12B1200B08904 /* IBANValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANValidator.swift; sourceTree = "<group>"; };
+		1E20E2922CD12B3800B08904 /* IBANValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANValidatorTest.swift; sourceTree = "<group>"; };
+		1E20E2942CD12B5200B08904 /* ScanIBANViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanIBANViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,10 @@
 		1E20E25A2CD129E800B08904 /* BForBank */ = {
 			isa = PBXGroup;
 			children = (
+				1E20E2852CD12A9300B08904 /* ScanIBAN */,
+				1E20E28A2CD12ACD00B08904 /* Views */,
+				1E20E28F2CD12AFC00B08904 /* Utils */,
 				1E20E25B2CD129E800B08904 /* BForBankApp.swift */,
-				1E20E25D2CD129E800B08904 /* ContentView.swift */,
 				1E20E25F2CD129EB00B08904 /* Assets.xcassets */,
 				1E20E2612CD129EB00B08904 /* Preview Content */,
 			);
@@ -113,7 +125,8 @@
 		1E20E26B2CD129EB00B08904 /* BForBankTests */ = {
 			isa = PBXGroup;
 			children = (
-				1E20E26C2CD129EB00B08904 /* BForBankTests.swift */,
+				1E20E2922CD12B3800B08904 /* IBANValidatorTest.swift */,
+				1E20E2942CD12B5200B08904 /* ScanIBANViewModelTest.swift */,
 			);
 			path = BForBankTests;
 			sourceTree = "<group>";
@@ -125,6 +138,32 @@
 				1E20E2782CD129EB00B08904 /* BForBankUITestsLaunchTests.swift */,
 			);
 			path = BForBankUITests;
+			sourceTree = "<group>";
+		};
+		1E20E2852CD12A9300B08904 /* ScanIBAN */ = {
+			isa = PBXGroup;
+			children = (
+				1E20E2862CD12AA800B08904 /* ScanIBANViewModel.swift */,
+				1E20E2882CD12ABE00B08904 /* ScanIBANView.swift */,
+			);
+			path = ScanIBAN;
+			sourceTree = "<group>";
+		};
+		1E20E28A2CD12ACD00B08904 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E20E28B2CD12AE400B08904 /* AddBeneficiaryView.swift */,
+				1E20E28D2CD12AF400B08904 /* DataScannerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E20E28F2CD12AFC00B08904 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1E20E2902CD12B1200B08904 /* IBANValidator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +237,7 @@
 					};
 					1E20E2672CD129EB00B08904 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 						TestTargetID = 1E20E2572CD129E800B08904;
 					};
 					1E20E2712CD129EB00B08904 = {
@@ -257,8 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E20E25E2CD129E800B08904 /* ContentView.swift in Sources */,
+				1E20E2912CD12B1200B08904 /* IBANValidator.swift in Sources */,
+				1E20E28E2CD12AF400B08904 /* DataScannerView.swift in Sources */,
+				1E20E28C2CD12AE400B08904 /* AddBeneficiaryView.swift in Sources */,
 				1E20E25C2CD129E800B08904 /* BForBankApp.swift in Sources */,
+				1E20E2872CD12AA800B08904 /* ScanIBANViewModel.swift in Sources */,
+				1E20E2892CD12ABE00B08904 /* ScanIBANView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E20E26D2CD129EB00B08904 /* BForBankTests.swift in Sources */,
+				1E20E2932CD12B3800B08904 /* IBANValidatorTest.swift in Sources */,
+				1E20E2952CD12B5200B08904 /* ScanIBANViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +465,8 @@
 				DEVELOPMENT_TEAM = ZUQQS8UTWE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan documents.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +496,8 @@
 				DEVELOPMENT_TEAM = ZUQQS8UTWE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan documents.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -472,15 +521,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZUQQS8UTWE;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naderfadhl.BForBankTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BForBank.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BForBank";
@@ -492,11 +548,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZUQQS8UTWE;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naderfadhl.BForBankTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
