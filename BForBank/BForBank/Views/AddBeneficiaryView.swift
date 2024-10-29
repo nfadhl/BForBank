@@ -13,34 +13,14 @@ struct AddBeneficiaryView: View {
     var body: some View {
         NavigationStack() {
             VStack(spacing: 30) {
-                Text("Scannez, importez ou saisissez l’IBAN")
-                    .foregroundColor(.gray)
-                
-                NavigationLink(destination: ScanIBANView(iban: $iban)) {
-                    HStack {
-                        Image(systemName: "camera")
-                        Text("Scanner")
-                            .fontWeight(.semibold)
-                    }
-                    .padding(10)
-                    .foregroundColor(Color("customColor"))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color("customColor"), lineWidth: 2)
-                    )
-                    .cornerRadius(10)
-                }
-                
-                TextField("FR76 XXXX", text: $iban)
-                    .padding()
-                    .background(Color("customColor"))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 10)
+                instructionText
+                scannerButton
+                ibanTextField
                 
                 Spacer()
             }
             .padding()
+            .background(.black)
             .foregroundColor(.white)
             .navigationTitle("Ajouter un bénéficiaire")
             .navigationBarTitleDisplayMode(.inline)
@@ -49,4 +29,35 @@ struct AddBeneficiaryView: View {
             .toolbarColorScheme(.dark, for: .navigationBar)
         }
     }
+    
+    private var instructionText: some View {
+            Text("Scannez, importez ou saisissez l’IBAN")
+                .foregroundColor(.gray)
+        }
+    
+    private var scannerButton: some View {
+           NavigationLink(destination: ScanIBANView(iban: $iban)) {
+               HStack {
+                   Image(systemName: "camera")
+                   Text("Scanner")
+                       .fontWeight(.semibold)
+               }
+               .padding(10)
+               .foregroundColor(Color("customColor"))
+               .overlay(
+                   RoundedRectangle(cornerRadius: 10)
+                       .stroke(Color("customColor"), lineWidth: 2)
+               )
+               .cornerRadius(10)
+           }
+       }
+    
+    private var ibanTextField: some View {
+            TextField("FR76 XXXX", text: $iban)
+                .padding()
+                .background(Color("customColor"))
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .padding(.horizontal, 10)
+        }
 }

@@ -21,48 +21,58 @@ struct ScanIBANView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
-                Text("Placez votre IBAN dans le cadre pour le scanner")
-                    .multilineTextAlignment(.center)
-                
+                instructionText
+                Spacer()
                 scannerView
+                Spacer()
             }
+            .padding(.top, 40)
             
             if viewModel.displayValidationView {
                 validationView
             }
         }
-        .padding(0)
         .background(Color("customColor"))
         .foregroundColor(.white)
         .navigationTitle("Scanner votre IBAN")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: { dismiss() }) {
+                    Image(systemName: "chevron.left")
+                        .foregroundColor(Color("customColor"))
+                }
+            }
+        }
         .toolbarBackground(Color.black, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
     }
     
-    var scannerView: some View {
-        ZStack {
-            DataScannerView(recognizedText: $viewModel.recognizedText, isScanning: $viewModel.isScanning, recognizedTextValidation: { iban in
-                IBANValidator.isValidIBAN(iban)
-            })
-            .background(Color.gray.opacity(0.1))
-            .cornerRadius(8)
-            .ignoresSafeArea()
-            
-            VStack {
-                Spacer()
-                Rectangle()
-                    .strokeBorder(Color("customColor"), lineWidth: 2)
-                    .frame(height: 60)
-                    .background(Color.clear)
-                Spacer()
-            }
-            .padding(.horizontal, 20)
-        }
+    private var instructionText: some View {
+        Text("Placez votre IBAN dans le cadre pour le scanner")
+            .multilineTextAlignment(.center)
+            .padding(.horizontal)
     }
     
-    var  validationView: some View {
+    private var scannerView: some View {
+        
+        DataScannerView(recognizedText: $viewModel.recognizedText, isScanning: $viewModel.isScanning, recognizedTextValidation: { iban in
+            IBANValidator.isValidIBAN(iban)
+        })
+        .frame(height: 60)
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(8)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color("customColor"), lineWidth: 2)
+        )
+        
+        .padding(.horizontal, 20)
+    }
+    
+    private var  validationView: some View {
         VStack(spacing: 10) {
             Text("l'IBAN du bénéficiare a été scanné")
                 .font(.headline)
