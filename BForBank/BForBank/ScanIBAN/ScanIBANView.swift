@@ -21,9 +21,11 @@ struct ScanIBANView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
-                instructionText
-                Spacer()
-                scannerView
+                if viewModel.isScanning {
+                    instructionText
+                    Spacer()
+                    scannerView
+                }
                 Spacer()
             }
             .padding(.top, 40)
