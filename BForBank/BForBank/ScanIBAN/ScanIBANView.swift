@@ -56,7 +56,7 @@ struct ScanIBANView: View {
     
     private var scannerView: some View {
         ZStack{
-            DataScannerView(recognizedText: $viewModel.recognizedText, isScanning: $viewModel.isScanning, recognizedTextValidation: { iban in
+            DataScannerView(recognizedText: $viewModel.recognizedText, recognizedTextValidation: { iban in
                 IBANValidator.isValidIBAN(iban)
             })
             RoundedRectangle(cornerRadius: 10)
@@ -64,6 +64,7 @@ struct ScanIBANView: View {
                 .frame(height: 60)
                 .padding(.horizontal,20)
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
     
     private var  validationView: some View {

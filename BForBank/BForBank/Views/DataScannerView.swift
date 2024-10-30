@@ -11,8 +11,6 @@ import VisionKit
 
 struct DataScannerView: UIViewControllerRepresentable {
     @Binding var recognizedText: String
-    @Binding var isScanning: Bool
-    
     var recognizedTextValidation: ((String) -> (Bool))?
     
     func makeUIViewController(context: Context) -> DataScannerViewController {
@@ -44,9 +42,9 @@ struct DataScannerView: UIViewControllerRepresentable {
             for item in addedItems {
                 switch item {
                 case .text(let text):
-                    print(text.transcript)
                     if let validateRecognizedText = parent.recognizedTextValidation, validateRecognizedText(text.transcript) {
                         parent.recognizedText = text.transcript
+                        dataScanner.stopScanning()
                     }
                 default:
                     break
