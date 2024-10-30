@@ -29,28 +29,32 @@ struct DataScannerView: UIViewControllerRepresentable {
             try? uiViewController.startScanning()
     }
     
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+    func makeCoordinator() -> IbanScannerCoordinator {
+        IbanScannerCoordinator(self)
     }
     
-    final class Coordinator: NSObject, DataScannerViewControllerDelegate {
+    final class IbanScannerCoordinator: NSObject, DataScannerViewControllerDelegate {
         var parent: DataScannerView
         
         init(_ parent: DataScannerView) {
             self.parent = parent
         }
         
-        func dataScanner(_ dataScanner: DataScannerViewController, didTapOn item: RecognizedItem) {
-            switch item {
-            case .text(let text):
-                if let validateRecognizedText = parent.recognizedTextValidation, validateRecognizedText(text.transcript) {
-                    parent.recognizedText = text.transcript
-                }
-                
-            default:
-                break
+        func dataScanner(_ dataScanner: DataScannerViewController, didRemove removedItems: [RecognizedItem], allItems: [RecognizedItem]) {
+            let reconizedItems = allItems.filter { item in
+                !removedItems.contains(where: {$0.id == item.id})
             }
-            
+            for item in reconizedItems {
+                switch item {
+                case .text(let text):
+                    print(text.transcript)
+                    if let validateRecognizedText = parent.recognizedTextValidation, validateRecognizedText(text.transcript) {
+                        parent.recognizedText = text.transcript
+                    }
+                default:
+                    break
+                }
+            }
         }
     }
 }
