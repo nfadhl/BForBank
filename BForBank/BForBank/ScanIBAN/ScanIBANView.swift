@@ -23,13 +23,9 @@ struct ScanIBANView: View {
             VStack {
                 if viewModel.isScanning {
                     instructionText
-                    Spacer()
-                    scannerView
                 }
-                Spacer()
+                scannerView
             }
-            .padding(.top, 40)
-            
             if viewModel.displayValidationView {
                 validationView
             }
@@ -59,19 +55,15 @@ struct ScanIBANView: View {
     }
     
     private var scannerView: some View {
-        
-        DataScannerView(recognizedText: $viewModel.recognizedText, isScanning: $viewModel.isScanning, recognizedTextValidation: { iban in
-            IBANValidator.isValidIBAN(iban)
-        })
-        .frame(height: 60)
-        .background(Color.gray.opacity(0.1))
-        .cornerRadius(8)
-        .overlay(
+        ZStack{
+            DataScannerView(recognizedText: $viewModel.recognizedText, isScanning: $viewModel.isScanning, recognizedTextValidation: { iban in
+                IBANValidator.isValidIBAN(iban)
+            })
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color("customColor"), lineWidth: 2)
-        )
-        
-        .padding(.horizontal, 20)
+                .frame(height: 60)
+                .padding(.horizontal,20)
+        }
     }
     
     private var  validationView: some View {

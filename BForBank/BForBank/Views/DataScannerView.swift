@@ -40,11 +40,8 @@ struct DataScannerView: UIViewControllerRepresentable {
             self.parent = parent
         }
         
-        func dataScanner(_ dataScanner: DataScannerViewController, didRemove removedItems: [RecognizedItem], allItems: [RecognizedItem]) {
-            let reconizedItems = allItems.filter { item in
-                !removedItems.contains(where: {$0.id == item.id})
-            }
-            for item in reconizedItems {
+        func dataScanner(_ dataScanner: DataScannerViewController, didAdd addedItems: [RecognizedItem], allItems: [RecognizedItem]) {
+            for item in addedItems {
                 switch item {
                 case .text(let text):
                     print(text.transcript)
